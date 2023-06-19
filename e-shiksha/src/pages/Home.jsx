@@ -12,14 +12,16 @@ return(
     display="flex"
     alignItems="flex-end"
     justifyContent="flex-start"
+    maxWidth="1650px"
     width='100%'
     py={350}
     bgImage={image}
     bgPosition='center'
     bgRepeat='no-repeat'
+    bgSize="cover"
     mb={2}
     >
-        <Box position="absolute" bottom={10} left={60} >
+        <Box position="absolute" bottom={10} left="160px" >
           <Button colorScheme="red" borderRadius="20px" width={200} fontSize={20} fontWeight="bold"><Link to="/login">Get Started</Link></Button>
         </Box>
     </Box>
