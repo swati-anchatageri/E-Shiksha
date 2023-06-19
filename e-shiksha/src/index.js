@@ -8,13 +8,13 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { AppContextProvider } from './context/AuthContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<ChakraProvider>
-    <BrowserRouter>
+<BrowserRouter>
+    <ChakraProvider>
         <AppContextProvider>
             <App />
         </AppContextProvider>
-    </BrowserRouter> 
-</ChakraProvider>
+    </ChakraProvider>
+ </BrowserRouter> 
 );
 
 // If you want to start measuring performance in your app, pass a function

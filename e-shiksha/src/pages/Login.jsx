@@ -40,6 +40,8 @@ const Login=()=>{
         </Heading>
         </Center>
             <br/>
+            
+            <Center>
             <Box border="solid teal 1px " boxSize="sm" width="xl" margin="20px" padding={20} borderRadius={20} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
             <Box>
             <FormControl id="email">
@@ -71,6 +73,7 @@ const Login=()=>{
             </FormControl>
             </Box>
             <Box>
+            
             <Center>
             <Button
             mt={4}
@@ -83,6 +86,7 @@ const Login=()=>{
           </Center>
           </Box>
           </Box>
+          </Center>
               <br/>
               <br/>
         <Center>
@@ -90,6 +94,7 @@ const Login=()=>{
         Not yet Registered.? <Link to="/signup" style={{color:"teal"}}>Register Here</Link>
         </Heading>
         </Center>
+       
             <br/>
         </>
     )

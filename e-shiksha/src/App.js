@@ -6,6 +6,7 @@ import logo from "./E-Shiksha.png"
 import { Link } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext';
 import { Heading } from '@chakra-ui/react';
+import Footer from './component/Footer';
 function App() {
 const {logoutUser,authState}=useContext(AuthContext)
 
@@ -14,9 +15,9 @@ const handleClick=()=>{
 } 
   return (
     <>
-    <div className="App" style={{width:"90%", height:"40px",display:"grid", gridTemplateColumns:"repeat(3,1fr)",margin:"10px",padding:"10px",gap:"20px"}}>
-      <div style={{textAlign:"left",display:"flex",alignItems:"start",justifyContent:"center" }} >
-        <img src={logo} width={80} alt="E-SHIKSHA"/>
+    <div className="App" style={{width:"100%",display:"grid", gridTemplateColumns:"repeat(3,1fr)",margin:"10px",padding:"10px",gap:"20px",alignItems:"center",justifyContent:"center"}}>
+      <div style={{textAlign:"left",width:"100%", display:"flex",alignItems:"start",justifyContent:"start" }} >
+        <img src={logo} width={80} alt="E-SHIKSHA" style={{borderRadius:"50px",marginLeft:"10px"}}/>
       </div>
       <div >
         <Navbar/>
@@ -48,12 +49,15 @@ const handleClick=()=>{
       </div>
       
     </div>
-    <div style={{display:"flex",alignItems:"center", justifyContent:"center", margin:"auto",padding:"20px"}}>
-    <div>
+    <div style={{ width:"100%",display:"flex",alignItems:"center", justifyContent:"center", margin:"auto",padding:"10px"}}>
+    <div style={{width:"100%", margin:"10px", padding:"10px"}}>
     <AllRoutes />
     </div>
       
       </div>
+    <div style={{width:"100%",display:"flex",alignItems:"center", justifyContent:"center", padding:"10px"}}>
+    <Footer />
+    </div>
       </>
   );
 }

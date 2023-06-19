@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Heading,
 Box,
 FormControl,
@@ -9,7 +9,7 @@ Button,
 Center} from "@chakra-ui/react";
 import { useState } from "react";
 const SignUp=()=>{
-    
+    const navigate=useNavigate()
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
@@ -23,10 +23,15 @@ const SignUp=()=>{
             body:JSON.stringify({name:name,email:email,password:password,phno:phno})
         })
         .then(()=>{
+            alert(`Data Submitted: Name: ${name} Email: ${email} Password: ********** Phone Number: ${phno}`);
             setName("")
             setEmail("")
             setPassword("")
             setPhno("")
+           
+        })
+        .then(()=>{
+            navigate(`/login`)
         })
         .catch((err)=>{
             console.log(err)
@@ -43,6 +48,7 @@ const SignUp=()=>{
         </Heading>
         </Center>
         <br/>
+        <Center>
         <Box border="solid teal 1px " width="xl" margin="20px" padding={20} borderRadius={20} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
         <Box>
             <FormControl id="name">
@@ -118,6 +124,7 @@ const SignUp=()=>{
           </Center>
           </Box>
           </Box>
+          </Center>
         <br/>
         <br/>
         <Center>
